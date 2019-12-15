@@ -13,12 +13,7 @@ import Main from './component/Main'
 // =============================
 
 // ExternalAPI-URL Definer
-let apiUrl = '';
-if (process.env.NODE_ENV === 'development') {
-  apiUrl = 'https://api.spacexdata.com/v3/launches/'
-} else {
-  console.log('nothing');
-}
+let apiUrl = 'https://api.spacexdata.com/v3/launches/';
 
 
 class App extends React.Component {
@@ -40,11 +35,10 @@ class App extends React.Component {
         this.setState({
           launchArray: jData
         })
-        console.log(this.state.launchArray);
+        // console.log(this.state.launchArray);
       })
       .catch(err=>console.log(err))
     }
-
   componentDidMount() {
     this.pullLaunches()
   }
@@ -53,8 +47,6 @@ class App extends React.Component {
 //// RENDER
 //// ==============
   render(){
-
-
     return(
       <div className="container">
         <Nav />
