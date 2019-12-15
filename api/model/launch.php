@@ -27,7 +27,7 @@ class Launches {
         intval($row_object->id),
         intval($row_object->likes),
         intval($row_object->flight_number),
-        ArrayObject($row_object->notes)
+        $row_object->notes
       );
       $launches[] = $new_launch;
       $row_object = pg_fetch_object($results);
