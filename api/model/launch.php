@@ -7,7 +7,7 @@ class Launch {
   public $flight_number;
   public $notes;
 
-  public function __construct($id, $flight_number){
+  public function __construct($id, $likes, $flight_number, $notes){
     $this->id = $id;
     $this->likes = $likes;
     $this->flight_number = $flight_number;
