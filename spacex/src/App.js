@@ -14,7 +14,8 @@ import Main from './component/Main'
 
 // ExternalAPI-URL Definer
 let apiUrl = 'https://api.spacexdata.com/v3/launches/';
-
+let intApiUrl = 'http://turbo-spork-app.herokuapp.com/api/'
+let test = 'test'
 
 class App extends React.Component {
   constructor(props){
@@ -39,9 +40,24 @@ class App extends React.Component {
       })
       .catch(err=>console.log(err))
     }
+
+  pullStuff = () => {
+      fetch(`${intApiUrl}`)
+      .then(response => response.json())
+      .then(jData => {
+        this.setState({
+          notes: jData
+        })
+        console.log(this.state.notes);
+      })
+      .catch(err=>console.log(err))
+    }
   componentDidMount() {
     this.pullLaunches()
+    this.pullStuff()
   }
+
+
 
 //// ==============
 //// RENDER
@@ -49,9 +65,12 @@ class App extends React.Component {
   render(){
     return(
       <div className="container">
+      This is some notess maybe: {this.state.notes}
         <Nav />
         {/* this is a comment? */}
         <Main launchArray={this.state.launchArray}/>
+
+
       </div>
     )
   }
