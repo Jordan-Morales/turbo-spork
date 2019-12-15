@@ -18,17 +18,16 @@ class Launches extends React.Component{
 //// ==============
   render (){
     return (
-      <div className="row">
-      launch cards go here.
 
-        <div className="col s12 m6">
 
           <div className="card blue-grey">
+          Number: {this.props.launchData.flight_number} <br/>
+          Mission Name: {this.props.launchData.mission_name} <br/>
+          Location: {this.props.launchData.launch_site.site_name_long} <br/>
+          Date: {this.props.launchData.launch_date_local} <br/>
           </div>
 
-        </div>
 
-      </div>
     )
   }
 }

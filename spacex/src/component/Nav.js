@@ -19,11 +19,11 @@ class Nav extends React.Component{
     return (
       <div>
         <nav>
-          <button href="#">Home
+          <button>Home
           </button>
-          <button href="#">About SpaceX
+          <button>About SpaceX
           </button>
-          <button href="#">About Team
+          <button>About Team
           </button>
         </nav>
       </div>

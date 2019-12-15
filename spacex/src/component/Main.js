@@ -25,10 +25,22 @@ class Main extends React.Component{
 //// ==============
   render (){
     return (
+
       <div>
         This is the main section.
-        <Launches />
-        <Space />
+
+      <Space />
+
+        <div className="row">
+        <div className="col s12 m6">
+        {this.props.launchArray.map((grabLaunch) =>
+          <Launches
+            key={grabLaunch.flight_number}
+            launchData={grabLaunch}
+          />
+        )}
+        </div>
+        </div>
       </div>
     )
   }
