@@ -3,9 +3,9 @@ $dbconn = pg_connect(getenv("DATABASE_URL"));
 
 class Launch {
   public $id;
-  public $likes:
-  public $flight_number:
-  public $notes:
+  public $likes;
+  public $flight_number;
+  public $notes;
 
   public function __construct($id, $flight_number){
     $this->id = $id;
