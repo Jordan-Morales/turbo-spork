@@ -5,7 +5,8 @@
 import React from 'react'
 
 // components
-
+import Space from './SpaceX'
+import Launches from './Launches'
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -25,16 +26,9 @@ class Main extends React.Component{
   render (){
     return (
       <div>
-      This is the main section.
-        <div className="row">
-          <div className="col s12 m6">
-
-            <div className="card blue-grey">
-          This is where the cards will go.
-            </div>
-
-          </div>
-        </div>
+        This is the main section.
+        <Launches />
+        <Space />
       </div>
     )
   }

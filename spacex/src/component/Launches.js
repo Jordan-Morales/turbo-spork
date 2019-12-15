@@ -9,7 +9,8 @@ import React from 'react'
 // =============================
 // COMPONENT CLASS
 // =============================
-class Team extends React.Component{
+class Launches extends React.Component{
+
 
 
 //// ==============
@@ -17,8 +18,16 @@ class Team extends React.Component{
 //// ==============
   render (){
     return (
-      <div>
-        About Coding Team.
+      <div className="row">
+      launch cards go here.
+
+        <div className="col s12 m6">
+
+          <div className="card blue-grey">
+          </div>
+
+        </div>
+
       </div>
     )
   }
@@ -27,4 +36,4 @@ class Team extends React.Component{
 // =============================
 // EXPORT
 // =============================
-export default Team
+export default Launches
