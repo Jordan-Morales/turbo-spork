@@ -19,7 +19,6 @@ class Nav extends React.Component{
     return (
       <div>
         <nav>
-          This is the nav bar.
           <button href="#">Home
           </button>
           <button href="#">About SpaceX

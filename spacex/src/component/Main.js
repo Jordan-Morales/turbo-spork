@@ -26,7 +26,15 @@ class Main extends React.Component{
     return (
       <div>
       This is the main section.
-        <div>This is where the cards will go.</div>
+        <div className="row">
+          <div className="col s12 m6">
+
+            <div className="card blue-grey">
+          This is where the cards will go.
+            </div>
+
+          </div>
+        </div>
       </div>
     )
   }
