@@ -6,7 +6,7 @@ if ($_REQUEST['action'] === 'index') {
   } elseif ($_REQUEST['action'] === 'post') {
     $request_body = file_get_contents('php://input');
     $body_object = json_decode($request_body);
-    $new_launch = new launch(null, $body_object->flight_number);
+    $new_launch = new launch(null, $body_object->likes, $body_object->flight_number, $body_object->mission_name, $body_object->site_name_long, $body_object->launch_date_local, $body_object->notes);
     $all_launches = Launches::create($new_launch);
     echo json_encode($all_launches);
     } else if ($_REQUEST['action'] === 'update'){
