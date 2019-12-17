@@ -44,8 +44,8 @@ class Launches {
     return $launches;
   }
   static function create($launch){
-    error_log(launch->likes);
-    error_log(launch->mission_name);
+    error_log($launch=>"likes");
+    error_log($launch=>"mission_name");
     $query = "INSERT INTO launches (likes, flight_number, mission_name, site_name_long, launch_date_local, notes) VALUES ($1, $2, $3, $4, $5, $6)";
     $query_params = array($launch->likes, $launch->flight_number, $launch->mission_name, $launch->site_name_long, $launch->launch_date_local, $launch->notes);
     pg_query_params($query, $query_params);
