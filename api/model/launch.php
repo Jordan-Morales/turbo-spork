@@ -53,8 +53,8 @@ class Launches {
   }
 
   static function update($updated_launch){
-      $query = "UPDATE launches SET notes = $1 WHERE id = $2";
-      $query_params = array($updated_launch->notes, $updated_launch->id);
+      $query = "UPDATE launches SET likes = $1, flight_number = $2, mission_name = $3, site_name_long = $4, launch_date_local = $5, notes = $6 WHERE id = $7";
+      $query_params = array($launch->likes, $launch->flight_number, $launch->mission_name, $launch->site_name_long, $launch->launch_date_local, $launch->notes, $updated_launch->id);
       $result = pg_query_params($query, $query_params);
 
       return self::all();
