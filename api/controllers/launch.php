@@ -11,7 +11,10 @@ if ($_REQUEST['action'] === 'index') {
     echo json_encode($all_launches);
     } else if ($_REQUEST['action'] === 'update'){
       $request_body = file_get_contents('php://input');
+      print_r(file_get_contents('php://input'));
+      print_r($request_body);
       $body_object = json_decode($request_body);
+      print_r($body_object);
       $updated_launch = new Launch($_REQUEST['id'], $body_object->likes, $body_object->flight_number, $body_object->mission_name, $body_object->site_name_long, $body_object->launch_date_local, $body_object->notes);
       $all_launches = Launches::update($updated_launch);
       echo json_encode($all_launches);
