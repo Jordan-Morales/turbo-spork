@@ -15,7 +15,7 @@ elseif ($_REQUEST['action'] === 'post') {
   }
 
 else if ($_REQUEST['action'] === 'update'){
-  $request_body[0] = file_get_contents('php://input');
+  $request_body = file_get_contents('php://input');
   $body_object = json_decode($request_body);
   $updated_launch = new Launch($_REQUEST['id'], $body_object->likes, $body_object->flight_number, $body_object->mission_name, $body_object->site_name_long, $body_object->launch_date_local, $body_object->notes);
   $all_launches = Launches::update($updated_launch);
