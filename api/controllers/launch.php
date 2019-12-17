@@ -17,7 +17,7 @@ elseif ($_REQUEST['action'] === 'post') {
 else if ($_REQUEST['action'] === 'update'){
   $request_body = file_get_contents('php://input');
   $body_object = json_decode($request_body);
-  $updated_launch = new Launch($request_object->id, $request_object->likes, $request_object->flight_number, $request_object->mission_name, $request_object->site_name_long, $request_object->launch_date_local, $request_object->notes);
+  $updated_launch = new Launch($request_body->id, $request_body->likes, $request_body->flight_number, $request_body->mission_name, $request_body->site_name_long, $request_body->launch_date_local, $request_body->notes);
   $all_launches = Launches::update($updated_launch);
   echo json_encode($all_launches);
   }
