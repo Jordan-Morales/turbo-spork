@@ -16,4 +16,4 @@ We wanted to design an app that allowed you to view all the launches that SpaceX
 - SpaceX API - https://github.com/r-spacex/SpaceX-API
 
 ## This is Why
-<img src="https://media.giphy.com/media/A6UIVKd1x1WJa/giphy.gif?raw=true">
+<img src="spacex/rocket.gif?raw=true">
