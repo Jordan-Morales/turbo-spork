@@ -14,3 +14,6 @@ We wanted to design an app that allowed you to view all the launches that SpaceX
 - SQL
 - HTML+CSS(Materialize CSS frameworks)
 - SpaceX API - https://github.com/r-spacex/SpaceX-API
+
+## This is Why
+![Land the Rocket](https://media.giphy.com/media/A6UIVKd1x1WJa/giphy.gif)
