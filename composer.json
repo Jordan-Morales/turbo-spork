@@ -1,11 +1,11 @@
 {
-    "name": "zdonner/turbo-spork",
+    "name": "group-project/turbo-spork",
     "description": "Unit 4 Project",
     "type": "project",
     "authors": [
         {
-            "name": "KB-Z",
-            "email": "zdonner179@gmail.com"
+            "name": "JM-KB",
+            "email": "zdonnner179/jordan.morales@gmail.com"
         }
     ],
     "require": {}
